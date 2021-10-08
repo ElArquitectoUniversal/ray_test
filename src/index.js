@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+function Listener() {
+    window.addEventListener('keydown', (e)=> {
+        alert(`F U N C I O N A`);
+    });
+
+    return (
+        <h1>Presiona cualquier tecla para corroborar que funcione</h1>
+    );
+}
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Listener />,
+    document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
